@@ -7,6 +7,8 @@
 	position: relative;
 	transform-style: preserve-3d;
 	transition: transform 1000ms;
+	user-select: none;
+	cursor: pointer;
 }
 .card:hover {
 }
@@ -18,15 +20,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 60px;
+	font-size: 100%;
 	font-weight: 800;
 	color: white;
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9 alpha);
 	backface-visibility: hidden;
 }
+
 .card-front {
-	background-color: blue;
 	transform: rotateY(180deg);
+	background-size: cover;
+	background-position: center;
 }
 .card-back {
 	background-color: blueviolet;

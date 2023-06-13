@@ -1,8 +1,11 @@
 .deckCard {
 	width: 95%;
-	height: 95%;
+	min-height: 100vh;
+	height: 100%;
 	background-color: rgba(36, 65, 20, 0.582);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	flex-wrap: wrap;
+	gap: 0.5rem;
 }
