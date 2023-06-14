@@ -1,19 +1,33 @@
 .card {
 	width: 100%;
 	height: 100%;
-	border-radius: 5px;
-	border: 5px solid white;
-	box-shadow: 0px opx 15px black;
+	box-shadow: 0px 0px 15px black;
 	position: relative;
 	transform-style: preserve-3d;
-	transition: transform 1000ms;
+	transition: transform 0.5s;
 	user-select: none;
 	cursor: pointer;
+	z-index: 1;
 }
-.card:hover {
+.showCard {
+	width: 100%;
+	height: 100%;
+	box-shadow: 0px 0px 15px black;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.5s;
+	user-select: none;
+	cursor: pointer;
+	z-index: 1;
+}
+.card-hover {
+	box-shadow: 0px 0px 10px 4px white;
+	transition: all 0.5s;
 }
 .card-front,
 .card-back {
+	border-radius: 5px;
+	border: 5px solid white;
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -25,37 +39,42 @@
 	color: white;
 	text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9 alpha);
 	backface-visibility: hidden;
+	transition: all 0.5s;
 }
 
 .card-front {
 	transform: rotateY(180deg);
 	background-size: cover;
 	background-position: center;
+	display: flex;
+	align-items: flex-end;
 }
 .card-back {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	background-color: blueviolet;
 }
-
-.flip-exit {
-	transform: rotateY(0deg);
+.card-back p {
+	position: absolute;
+	top: 5px;
+	left: 5px;
 }
-.flip-exit-active {
-	transform: rotateY(180deg);
-	transition: transform 300ms;
-	transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
+.cover {
+	position: relative;
+	width: 100%;
+	height: 10%;
+	background-color: black;
+	z-index: 2000;
+	opacity: 1;
+	transition: opacity 1s;
 }
-.flip-exit-done {
-	transform: rotateY(180deg);
-}
-
-.flip-enter {
-	transform: rotateY(180deg);
-}
-.flip-enter-active {
-	transform: rotateY(0deg);
-	transition: transform 300ms;
-	transition-timing-function: cubic-bezier(0.57, 0.21, 0.69, 1.25);
-}
-.flip-enter-done {
-	transform: rotateY(0deg);
+.noCover {
+	position: relative;
+	z-index: 2000;
+	width: 100%;
+	height: 10%;
+	opacity: 0;
+	transition: opacity 1s;
 }
