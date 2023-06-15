@@ -1,0 +1,27 @@
+.FullSizeImage-exit {
+	visibility: hidden;
+	opacity: 0;
+}
+.FullSizeImage-exit-active {
+	visibility: visible;
+	transition: opacity 300ms;
+	opacity: 1;
+}
+.FullSizeImage-exit-done {
+	opacity: 1;
+	visibility: visible;
+}
+
+.FullSizeImage-enter {
+	opacity: 1;
+	visibility: visible;
+}
+.FullSizeImage-enter-active {
+	visibility: hidden;
+	transition: opacity 300ms;
+	opacity: 0;
+}
+.FullSizeImage-enter-done {
+	visibility: hidden;
+	opacity: 0;
+}

@@ -1,4 +1,4 @@
-import DeckCard from "../components/DeckCard";
+import DeckCard from "../components/dashBoardComponents/DeckCard";
 import "../styles/dashboard.css";
 
 const Dashboard = () => {
