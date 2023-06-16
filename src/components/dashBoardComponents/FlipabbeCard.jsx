@@ -19,7 +19,7 @@ const FlipabbleCard = (deck) => {
 			<CSSTransition in={showFront} timeout={300} classNames="flip">
 				<Card
 					key={deck.deck.id}
-					onClick={handleOnClick}
+					onDoubleClick={handleOnClick}
 					deck={deck}
 					showClass={showClass}
 				/>

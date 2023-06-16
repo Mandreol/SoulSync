@@ -5,7 +5,7 @@ import "../../styles/fullImageButtonTransitionGroup.css";
 import FullSizeImageButton from "./FullSizeImageButton";
 import { CSSTransition } from "react-transition-group";
 
-function Card({ deck, onClick, showClass }) {
+function Card({ deck, onDoubleClick, showClass }) {
 	const [isHover, setIsHover] = useState(true);
 	const [isCover, setIsCover] = useState(true);
 	const [showButton, setShowButton] = useState(true);
@@ -20,12 +20,10 @@ function Card({ deck, onClick, showClass }) {
 	const hoverClass = isHover ? "card-back" : "card-back card-hover";
 
 	const handleOnMouseEnterFront = () => {
-		console.log("in");
 		setShowButton(false);
 	};
 	const handleOnMouseLeaveFront = () => {
 		setShowButton(true);
-		console.log("out");
 	};
 	let showButtonClass;
 
@@ -37,7 +35,6 @@ function Card({ deck, onClick, showClass }) {
 		}
 	};
 	fullImageButtonClass();
-	console.log(fullImageButtonClass());
 	const imageStyle = {
 		backgroundImage: `url(./img/maso_${deck.deck.deckType}/${deck.deck.cardNumber}.jpg)`,
 	};
@@ -53,7 +50,7 @@ function Card({ deck, onClick, showClass }) {
 	}
 
 	return (
-		<div className={showClass} onClick={onClick}>
+		<div className={showClass} onDoubleClick={onDoubleClick}>
 			<div
 				className={hoverClass}
 				onMouseEnter={handleOnMouseEnterBack}
