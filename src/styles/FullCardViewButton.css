@@ -1,0 +1,36 @@
+.fullCardViewButton-dashBoard-hidden {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+	background-image: url(./img/assets/expandir.png);
+	opacity: 0;
+	transition: opacity 0.5s;
+	cursor: pointer;
+}
+.fullCardViewButton-dashBoard-visible {
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+	background-image: url(./img/assets/expandir.png);
+	visibility: visible;
+	opacity: 1;
+	transition: opacity 0.5s;
+	cursor: pointer;
+}
+
+.fullCardViewButton-fullView {
+	position: absolute;
+	top: 5%;
+	right: 5%;
+	width: 30px;
+	height: 30px;
+	background-size: contain;
+	background-image: url(./img/assets/minimizar.png);
+	cursor: pointer;
+}

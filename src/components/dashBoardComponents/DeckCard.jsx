@@ -16,7 +16,7 @@ const DeckCard = () => {
 	for (let i = 1; i <= cardsToDealCount; i++) {
 		if (!isDeckOrdered) {
 			let random = Math.floor(Math.random() * (deckSize - 1) + 1);
-			deck.push({ id: i, cardNumber: random, deckType });
+			deck.push({ id: random, cardNumber: i, deckType });
 		} else {
 			deck.push({ id: i, cardNumber: i, deckType });
 		}

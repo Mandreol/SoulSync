@@ -1,0 +1,36 @@
+.FullCardView-container {
+	position: absolute;
+	z-index: 50000;
+	width: 100vw;
+	height: 100vh;
+	background-color: black;
+	opacity: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.FullCardView-card-deck-1 {
+	width: calc(40vh * 1.3);
+	height: 40vh;
+	background-image: url(./img/maso_1/1.jpg);
+	background-size: cover;
+	border: 5px solid white;
+	border-radius: 5px;
+}
+.FullCardView-card-deck-2 {
+	width: calc(65vh * 0.7);
+	height: 65vh;
+	background-image: url(./img/maso_2/1.jpg);
+	background-size: cover;
+	border: 5px solid white;
+	border-radius: 5px;
+}
+.FullCardView-card-deck-3 {
+	width: 65vh;
+	height: 65vh;
+	background-image: url(./img/maso_3/1.jpg);
+	background-size: cover;
+	border: 5px solid white;
+	border-radius: 5px;
+}
