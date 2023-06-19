@@ -12,7 +12,9 @@ const DeckCard = () => {
 	const backTexts = [];
 	const isDeckOrdered = true;
 	let tiradaClass = "";
-	console.log(deckSize);
+
+	console.log(deckType);
+
 	for (let i = 1; i <= cardsToDealCount; i++) {
 		if (!isDeckOrdered) {
 			let random = Math.floor(Math.random() * (deckSize - 1) + 1);
