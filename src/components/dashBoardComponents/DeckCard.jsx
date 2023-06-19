@@ -6,13 +6,13 @@ import { TransitionGroup } from "react-transition-group";
 const DeckCard = () => {
 	let deck = [];
 
-	const deckType = useSelector((state) => state.deckType);
-	const deckSize = 20;
+	const deckType = useSelector((state) => state.deckType.deckType);
+	const deckSize = useSelector((state) => state.deckType.deckSize);
 	const cardsToDealCount = useSelector((state) => state.cardsToDealCount);
 	const backTexts = [];
 	const isDeckOrdered = true;
 	let tiradaClass = "";
-
+	console.log(deckSize);
 	for (let i = 1; i <= cardsToDealCount; i++) {
 		if (!isDeckOrdered) {
 			let random = Math.floor(Math.random() * (deckSize - 1) + 1);

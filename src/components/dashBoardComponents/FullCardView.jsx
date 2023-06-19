@@ -4,13 +4,12 @@ import { useSelector } from "react-redux";
 import FullCardViewButton from "./FullCardViewButton";
 
 const FullCardView = () => {
-	const deckType = useSelector((state) => state.deckType);
+	const deckType = useSelector((state) => state.deckType.deckType);
 	const fullCardViewActive = useSelector((state) => state.fullCardViewActive);
 	const selectedFullViewCard = useSelector(
 		(state) => state.selectedFullViewCard
 	);
-	console.log(selectedFullViewCard);
-	console.log(deckType);
+
 	let fullCardViewActiveClass = {
 		display: fullCardViewActive ? "flex" : "none",
 	};
