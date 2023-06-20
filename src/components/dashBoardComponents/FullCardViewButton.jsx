@@ -3,7 +3,6 @@ import "../../styles/FullCardViewButton.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setFullCardViewActive } from "../../store/slices/fullCardViewActive.slice";
 import { setSelectedFullViewCard } from "../../store/slices/selectedFullViewCard.silce";
-import { useNavigate } from "react-router-dom";
 
 const FullCardViewButton = ({ showButtonClass, cardId }) => {
 	const dispatch = useDispatch();

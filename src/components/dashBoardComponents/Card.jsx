@@ -65,10 +65,7 @@ function Card({ deck, onDoubleClick }) {
 					showButtonClass={showButtonClass}
 				/>
 
-				<div
-					className={coverClass}
-					cardNumber={deck.deck.id}
-					onClick={handleCover}></div>
+				<div className={coverClass} onClick={handleCover}></div>
 			</div>
 		</div>
 	);
