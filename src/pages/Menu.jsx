@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import "../styles/menu.css";
 import DeckTypeSelector from "../components/menuComponents/DeckTypeSelector";
+import DealTypeSelector from "../components/menuComponents/DealTypeSelector";
 
 const Menu = () => {
 	const dispatch = useDispatch();
@@ -19,6 +20,7 @@ const Menu = () => {
 	return (
 		<div className="menu-container">
 			<DeckTypeSelector />
+			<DealTypeSelector />
 			<form onSubmit={handleSubmit(submit)} className="menu-form">
 				<label htmlFor="cardsToDealCount">¿cuantas cartas quieres repartir?</label>
 				<input type="number" {...register("cardsToDealCount")} />

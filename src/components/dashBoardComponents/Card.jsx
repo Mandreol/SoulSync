@@ -40,7 +40,7 @@ function Card({ deck, onDoubleClick }) {
 	const handleCover = () => {
 		isCover ? setIsCover(false) : setIsCover(true);
 	};
-	if (deck.deck.deckType !== "3") {
+	if (deck.deck.deckType !== 3) {
 		coverClass = isCover ? "cover" : "noCover";
 	} else {
 		coverClass = "noCover";

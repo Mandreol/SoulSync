@@ -5,15 +5,12 @@ import { TransitionGroup } from "react-transition-group";
 
 const DeckCard = () => {
 	let deck = [];
-
+	const fullCardViewActive = useSelector((state) => state.fullCardViewActive);
 	const deckType = useSelector((state) => state.deckType.deckType);
 	const deckSize = useSelector((state) => state.deckType.deckSize);
 	const cardsToDealCount = useSelector((state) => state.cardsToDealCount);
 	const backTexts = [];
 	const isDeckOrdered = true;
-	let tiradaClass = "";
-
-	console.log(deckType);
 
 	for (let i = 1; i <= cardsToDealCount; i++) {
 		if (!isDeckOrdered) {
@@ -25,12 +22,17 @@ const DeckCard = () => {
 	}
 	deck.map((e, i) => (e.backText = backTexts[i]));
 
-	tiradaClass =
-		cardsToDealCount <= 8
-			? { gap: "5rem", height: "100vh" }
-			: { gap: "0.5rem", height: "100%" };
+	const tiradaClass = (fullCardViewActive) => {
+		if (fullCardViewActive) {
+			return { display: "none" };
+		} else {
+			return cardsToDealCount <= 8
+				? { gap: "5rem", height: "100vh" }
+				: { gap: "0.5rem", height: "100%" };
+		}
+	};
 	return (
-		<TransitionGroup className="deckCard" style={tiradaClass}>
+		<TransitionGroup className="deckCard" style={tiradaClass(fullCardViewActive)}>
 			{deck.map((c) => (
 				<FlipabbeCard key={c.id} deck={c} />
 			))}

@@ -20,23 +20,21 @@ const DeckTypeSelector = () => {
 
 	return (
 		<div className="DeckTypeSelector-container">
-			<div>
+			<div className="DeckTypeSelector-element-container">
 				<div
 					className={`DeckTypeSelector-element ${selected_1}`}
 					onClick={() => handleClick(1, 65)}
 					style={{ backgroundImage: "url('./img/maso_1/icono_maso_1.png')" }}></div>
 				<h1>Point of view</h1>
 			</div>
-			<div>
-				{" "}
+			<div className="DeckTypeSelector-element-container">
 				<div
 					className={`DeckTypeSelector-element ${selected_2}`}
 					onClick={() => handleClick(2, 80)}
 					style={{ backgroundImage: "url('./img/maso_2/icon_deck_2.png')" }}></div>
 				<h1>Magic Cards</h1>
 			</div>
-			<div>
-				{" "}
+			<div className="DeckTypeSelector-element-container">
 				<div
 					className={`DeckTypeSelector-element ${selected_3}`}
 					onClick={() => handleClick(3, 25)}
