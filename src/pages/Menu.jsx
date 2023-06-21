@@ -1,31 +1,27 @@
 import React from "react";
-import { useDispatch } from "react-redux";
-import { setCardsToDealCount } from "../store/slices/cardsToDealCount.slice";
-import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
 import "../styles/menu.css";
 import DeckTypeSelector from "../components/menuComponents/DeckTypeSelector";
 import DealTypeSelector from "../components/menuComponents/DealTypeSelector";
+import CustomCardDeal from "../components/menuComponents/CustomCardDeal";
+import { useSelector } from "react-redux";
 
 const Menu = () => {
-	const dispatch = useDispatch();
-	const { register, handleSubmit } = useForm();
-	const navigate = useNavigate();
-	const submit = (data) => {
-		dispatch(setCardsToDealCount(data.cardsToDealCount));
+	const menuStatus = useSelector((state) => state.menuStatus);
 
-		navigate("/dashboard");
-	};
+	let viewClass;
+	menuStatus === 0
+		? (viewClass = "menu-view-0")
+		: menuStatus === 1
+		? (viewClass = "menu-view-1")
+		: (viewClass = "menu-view-2");
 
 	return (
-		<div className="menu-container">
-			<DeckTypeSelector />
-			<DealTypeSelector />
-			<form onSubmit={handleSubmit(submit)} className="menu-form">
-				<label htmlFor="cardsToDealCount">¿cuantas cartas quieres repartir?</label>
-				<input type="number" {...register("cardsToDealCount")} />
-				<input type="submit" value="Repartir" />
-			</form>
+		<div className="menu-view">
+			<div className={viewClass}>
+				<DeckTypeSelector />
+				<DealTypeSelector />
+				<CustomCardDeal />
+			</div>
 		</div>
 	);
 };

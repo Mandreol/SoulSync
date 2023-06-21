@@ -1,16 +1,24 @@
+.dealTypeSelector {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	gap: 5rem;
+}
 .dealTypeSelector-container {
 	width: 100%;
-	height: 30%;
 	display: flex;
 	justify-content: center;
 	align-content: center;
-	column-gap: 3rem;
+	column-gap: 5rem;
 }
 .dealTypeSelector-element-container {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	gap: 2rem;
 }
 .dealTypeSelector-element {
 	width: 100px;
@@ -26,4 +34,17 @@
 .dealTypeSelector-element:hover {
 	transform: scale(1.1);
 	transition: all 0.3s;
+}
+.dealTypeSelector-element-button {
+	width: 70px;
+	height: 61px;
+	background-image: url("./img/assets/flecha-izquierda.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.dealTypeSelector-element-button:hover {
+	filter: brightness(150%);
+	transition: all 0.5s;
 }

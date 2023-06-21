@@ -11,7 +11,7 @@ const Dashboard = () => {
 	return (
 		<div className="dashboard">
 			<div className="backButton" onClick={handleClick}>
-				<h1> &lt; </h1>
+				<h1></h1>
 			</div>
 			<DeckCard />
 			<FullCardView />

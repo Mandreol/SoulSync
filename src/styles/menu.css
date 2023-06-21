@@ -1,17 +1,32 @@
-.menu-container {
-	width: 100%;
+.menu-view-0 {
+	width: 300%;
 	height: 100vh;
 	background-color: rgb(175, 67, 67);
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	flex-direction: column;
-	gap: 2rem;
+	margin-left: 0%;
+	transition: all 1s;
 }
-
-.menu-form {
+.menu-view-1 {
+	width: 300%;
+	height: 100vh;
+	background-color: rgb(175, 67, 67);
 	display: flex;
-	justify-content: center;
 	align-items: center;
-	flex-direction: column;
+	margin-left: -100%;
+	transition: all 1s;
+}
+.menu-view-2 {
+	width: 300%;
+	height: 100vh;
+	background-color: rgb(175, 67, 67);
+	display: flex;
+	align-items: center;
+	margin-left: -200%;
+	transition: all 1s;
+}
+.menu-view {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
