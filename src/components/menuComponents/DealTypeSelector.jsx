@@ -24,7 +24,7 @@ const DealTypeSelector = () => {
 
 	return (
 		<div className="dealTypeSelector">
-			<h1>¿Qué deseas hacer hoy?</h1>
+			<h1>¿Qué querés hacer hoy?</h1>
 			<div className="dealTypeSelector-container">
 				<div className="dealTypeSelector-element-container">
 					<div

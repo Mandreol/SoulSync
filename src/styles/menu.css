@@ -1,7 +1,6 @@
 .menu-view-0 {
 	width: 300%;
 	height: 100vh;
-	background-color: rgb(175, 67, 67);
 	display: flex;
 	align-items: center;
 	margin-left: 0%;
@@ -10,7 +9,6 @@
 .menu-view-1 {
 	width: 300%;
 	height: 100vh;
-	background-color: rgb(175, 67, 67);
 	display: flex;
 	align-items: center;
 	margin-left: -100%;
@@ -19,7 +17,6 @@
 .menu-view-2 {
 	width: 300%;
 	height: 100vh;
-	background-color: rgb(175, 67, 67);
 	display: flex;
 	align-items: center;
 	margin-left: -200%;
@@ -29,4 +26,6 @@
 	width: 100vw;
 	height: 100vh;
 	overflow: hidden;
+	color: azure;
+	background-color: rgba(32, 32, 32, 0.979);
 }

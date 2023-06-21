@@ -19,3 +19,22 @@
 	filter: brightness(150%);
 	transition: all 0.5s;
 }
+.customCardDeal-container-1 {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+.customCardDealCalass_1-visible {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	opacity: 1;
+	transition: all 0.5s;
+}
+.customCardDealCalass_1-hidden {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	opacity: 0;
+	transition: all 0.5s;
+}
