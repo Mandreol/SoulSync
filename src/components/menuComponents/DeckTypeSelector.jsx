@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { setDeckType, setDeckSize } from "../../store/slices/deckType.slice";
 import "../../styles/DeckTypeSelector.css";
 import { setMenuStatus } from "../../store/slices/menuStatus.slice";
@@ -8,6 +8,7 @@ const DeckTypeSelector = () => {
 	const dispatch = useDispatch();
 	const [isSelected, setIsSelected] = useState(0);
 	const [buttonClass, setButtonClass] = useState("none");
+	const menuStatus = useSelector((state) => state.menuStatus);
 
 	const handleClick = (deckType, deckSize) => {
 		dispatch(setDeckType(deckType));
@@ -15,18 +16,23 @@ const DeckTypeSelector = () => {
 		setIsSelected(deckType);
 		setButtonClass("flex");
 	};
+	useEffect(() => {
+		isSelected !== 0 && menuStatus === 0
+			? setButtonClass("flex")
+			: setButtonClass("none");
+	}, [menuStatus]);
 
 	const handleSubmit = () => {
 		dispatch(setMenuStatus(1));
-		setButtonClass("none");
-		setIsSelected("");
 	};
-
+	console.log(isSelected);
+	console.log(menuStatus);
+	console.log(buttonClass);
 	const selected = (option) => (isSelected === option ? "selected" : "");
 
 	return (
 		<div className="DeckTypeSelector-container">
-			<h1>Elegí el mazo con el que querés trabajar hoy</h1>
+			<h1>Elegí el mazo con el que querés trabajar hoy:</h1>
 			<div className="elements-container">
 				<div className="DeckTypeSelector-element-container">
 					<div
