@@ -15,6 +15,16 @@ const DealTypeSelector = () => {
 	const navigate = useNavigate();
 	const menuStatus = useSelector((state) => state.menuStatus);
 
+	const dealsList = [
+		"tirada_1",
+		"tirada_2",
+		"tirada_3",
+		"tirada_4",
+		"tirada_5",
+		"tirada_6",
+		"tirada_7",
+	];
+
 	const explore = () => {
 		dispatch(setCardsToDealCount(deckSize));
 		navigate("/dashboard");
@@ -73,7 +83,15 @@ const DealTypeSelector = () => {
 						onClick={() => setIsSelected(2)}
 						style={{ backgroundImage: "url('./img/assets/tirada.png')" }}></div>
 					<h1>Elegir una tirada</h1>
-					<div className={`dealTypeSelector-element-list-${listClass}`}></div>
+					<div className={`dealTypeSelector-element-list-${listClass}`}>
+						<div className="element-list">
+							{dealsList.map((e, i) => (
+								<div className="element" key={dealsList[i]}>
+									{e}
+								</div>
+							))}
+						</div>
+					</div>
 				</div>
 				<div className="dealTypeSelector-element-container">
 					<div

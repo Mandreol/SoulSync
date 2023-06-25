@@ -93,6 +93,7 @@
 	height: 0%;
 	background-color: aliceblue;
 	transition: all 0.5s;
+	overflow: hidden;
 }
 .dealTypeSelector-element-list-visible {
 	position: absolute;
@@ -101,4 +102,23 @@
 	height: 110%;
 	background-color: aliceblue;
 	transition: all 0.5s;
+}
+
+.element-list {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.5rem;
+}
+
+.element {
+	background-color: black;
+	text-align: center;
+	transition: all 0.3s;
+}
+
+.element:hover {
+	background-color: rgba(0, 0, 0, 0.63);
+
+	transition: all 0.3s;
 }
