@@ -5,6 +5,7 @@ import flippSateReducer from "./slices/flippState.slice";
 import fullCardViewActiveReducer from "./slices/fullCardViewActive.slice";
 import selectedFullViewCarReducer from "./slices/selectedFullViewCard.silce";
 import menuStatusReducer from "./slices/menuStatus.slice";
+import selectedDealStatusReducer from "./slices/selectedDealStatus.slice";
 
 export default configureStore({
 	reducer: {
@@ -14,5 +15,6 @@ export default configureStore({
 		fullCardViewActive: fullCardViewActiveReducer,
 		selectedFullViewCard: selectedFullViewCarReducer,
 		menuStatus: menuStatusReducer,
+		selectedDealStatus: selectedDealStatusReducer,
 	},
 });

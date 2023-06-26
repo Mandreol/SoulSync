@@ -1,8 +1,8 @@
 import React from "react";
-import "../styles/menu.css";
-import DeckTypeSelector from "../components/menuComponents/DeckTypeSelector";
-import DealTypeSelector from "../components/menuComponents/DealTypeSelector";
-import CustomCardDeal from "../components/menuComponents/CustomCardDeal";
+import "../styles/menu/menu.css";
+import DeckSelector from "../components/menuComponents/DeckSelector";
+import DealSelector from "../components/menuComponents/DealSelector";
+import CustomDeal from "../components/menuComponents/CustomDeal";
 import { useSelector } from "react-redux";
 
 const Menu = () => {
@@ -18,9 +18,9 @@ const Menu = () => {
 	return (
 		<div className="menu-view">
 			<div className={viewClass}>
-				<DeckTypeSelector />
-				<DealTypeSelector />
-				<CustomCardDeal />
+				<DeckSelector />
+				<DealSelector />
+				<CustomDeal />
 			</div>
 		</div>
 	);

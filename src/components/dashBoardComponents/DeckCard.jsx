@@ -1,5 +1,5 @@
 import FlipabbeCard from "./FlipabbeCard";
-import "../../styles/deckCard.css";
+import "../../styles/dashboard/deckCard.css";
 import { useSelector } from "react-redux";
 import { TransitionGroup } from "react-transition-group";
 

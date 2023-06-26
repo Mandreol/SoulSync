@@ -1,5 +1,5 @@
 import React from "react";
-import "../../styles/FullCardViewButton.css";
+import "../../styles/dashboard/FullCardViewButton.css";
 import { useDispatch, useSelector } from "react-redux";
 import { setFullCardViewActive } from "../../store/slices/fullCardViewActive.slice";
 import { setSelectedFullViewCard } from "../../store/slices/selectedFullViewCard.silce";

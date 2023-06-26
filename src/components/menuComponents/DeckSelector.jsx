@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setDeckType, setDeckSize } from "../../store/slices/deckType.slice";
-import "../../styles/DeckTypeSelector.css";
+import "../../styles/menu/deckSelector/deckSelector.css";
 import { setMenuStatus } from "../../store/slices/menuStatus.slice";
 
-const DeckTypeSelector = () => {
+const DeckSelector = () => {
 	const dispatch = useDispatch();
 	const [isSelected, setIsSelected] = useState(0);
 	const [buttonClass, setButtonClass] = useState("none");
@@ -25,39 +25,36 @@ const DeckTypeSelector = () => {
 	const handleSubmit = () => {
 		dispatch(setMenuStatus(1));
 	};
-	console.log(isSelected);
-	console.log(menuStatus);
-	console.log(buttonClass);
 	const selected = (option) => (isSelected === option ? "selected" : "");
 
 	return (
-		<div className="DeckTypeSelector-container">
+		<div className="DeckSelector-container">
 			<h1>Elegí el mazo con el que querés trabajar hoy:</h1>
 			<div className="elements-container">
-				<div className="DeckTypeSelector-element-container">
+				<div className="DeckSelector-element-container">
 					<div
-						className={`DeckTypeSelector-element ${selected(1)}`}
+						className={`DeckSelector-element ${selected(1)}`}
 						onClick={() => handleClick(1, 65)}
 						style={{ backgroundImage: "url('./img/maso_1/icono_maso_1.png')" }}></div>
 
 					<h1>Point of view</h1>
 				</div>
-				<div className="DeckTypeSelector-element-container">
+				<div className="DeckSelector-element-container">
 					<div
-						className={`DeckTypeSelector-element ${selected(2)}`}
+						className={`DeckSelector-element ${selected(2)}`}
 						onClick={() => handleClick(2, 80)}
 						style={{ backgroundImage: "url('./img/maso_2/icon_deck_2.png')" }}></div>
 					<h1>Fatasy Cards</h1>
 				</div>
-				<div className="DeckTypeSelector-element-container">
+				<div className="DeckSelector-element-container">
 					<div
-						className={`DeckTypeSelector-element ${selected(3)}`}
+						className={`DeckSelector-element ${selected(3)}`}
 						onClick={() => handleClick(3, 25)}
 						style={{ backgroundImage: "url('./img/maso_3/icon_deck_3.png')" }}></div>
 					<h1>Principios Ñu</h1>
 				</div>
 				<div
-					className="DeckTypeSelector-element-button"
+					className="DeckSelector-element-button"
 					style={{ display: buttonClass }}
 					onClick={() => handleSubmit()}></div>
 			</div>
@@ -65,4 +62,4 @@ const DeckTypeSelector = () => {
 	);
 };
 
-export default DeckTypeSelector;
+export default DeckSelector;

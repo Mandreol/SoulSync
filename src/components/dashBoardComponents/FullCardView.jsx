@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/FullCardView.css";
+import "../../styles/dashboard/FullCardView.css";
 import { useSelector } from "react-redux";
 import FullCardViewButton from "./FullCardViewButton";
 

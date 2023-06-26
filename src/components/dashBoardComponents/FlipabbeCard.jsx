@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Card from "./Card";
 import { CSSTransition } from "react-transition-group";
-import "../../styles/flipabbleCard.css";
+import "../../styles/dashboard/flipabbleCard.css";
 
 const FlipabbleCard = (deck) => {
 	const [showFront, setShowFront] = useState(true);

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/customCardDeal.css";
+import "../../styles/menu/customDeal/customDeal.css";
 import { useDispatch } from "react-redux";
 import { setMenuStatus } from "../../store/slices/menuStatus.slice";
 import { setCardsToDealCount } from "../../store/slices/cardsToDealCount.slice";

@@ -1,6 +1,6 @@
 import DeckCard from "../components/dashBoardComponents/DeckCard";
 import FullCardView from "../components/dashBoardComponents/FullCardView";
-import "../styles/dashboard.css";
+import "../styles/dashboard/dashboard.css";
 import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {

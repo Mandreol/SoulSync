@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../../styles/card.css";
+import "../../styles/dashboard/card.css";
 import "../../styles/cardTransitionGroup.css";
 import FullCardViewButton from "./FullCardViewButton";
 

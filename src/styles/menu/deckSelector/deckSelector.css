@@ -1,4 +1,4 @@
-.DeckTypeSelector-container {
+.DeckSelector-container {
 	width: 100%;
 	height: 100%;
 	display: flex;
@@ -7,7 +7,7 @@
 	align-items: center;
 	gap: 20vh;
 }
-.DeckTypeSelector-container h1:first-child {
+.DeckSelector-container h1:first-child {
 	width: 98%;
 	padding-right: 40%;
 	font-size: 6vh;
@@ -21,7 +21,7 @@
 	gap: 15vw;
 	flex-wrap: wrap;
 }
-.DeckTypeSelector-element-container {
+.DeckSelector-element-container {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -29,7 +29,7 @@
 	gap: 2rem;
 }
 
-.DeckTypeSelector-element {
+.DeckSelector-element {
 	width: calc(35vh * 0.6);
 	height: 35vh;
 	cursor: pointer;
@@ -41,7 +41,7 @@
 	transition: all 0.3s;
 }
 
-.DeckTypeSelector-element:hover {
+.DeckSelector-element:hover {
 	transform: scale(1.01);
 	transition: all 0.3s;
 	box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.9);
@@ -50,7 +50,7 @@
 .selected {
 	box-shadow: 0px 0px 20px 10px rgba(247, 247, 247, 0.9);
 }
-.DeckTypeSelector-element-button {
+.DeckSelector-element-button {
 	position: absolute;
 	bottom: 40px;
 	right: 10px;
@@ -62,7 +62,7 @@
 	cursor: pointer;
 	transition: all 0.5s;
 }
-.DeckTypeSelector-element-button:hover {
+.DeckSelector-element-button:hover {
 	filter: brightness(150%);
 	transition: all 0.5s;
 }
