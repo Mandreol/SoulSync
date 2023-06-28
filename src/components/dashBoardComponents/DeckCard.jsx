@@ -1,7 +1,6 @@
 import FlipabbeCard from "./FlipabbeCard";
 import "../../styles/dashboard/deckCard.css";
 import { useSelector } from "react-redux";
-import { TransitionGroup } from "react-transition-group";
 
 const DeckCard = () => {
 	let deck = [];
@@ -15,16 +14,6 @@ const DeckCard = () => {
 	const footer = useSelector((state) => state.dealData.footer);
 	const backTexts = useSelector((state) => state.dealData.backTexts);
 	const isDeckOrdered = true;
-
-	console.log(deckType);
-	console.log(deckSize);
-	console.log(dealType);
-	console.log(cardsToDeal);
-	console.log(title);
-	console.log(subTitle);
-	console.log(backTexts);
-	console.log(footer);
-	console.log(deck);
 
 	for (let i = 1; i <= cardsToDeal; i++) {
 		if (!isDeckOrdered) {
@@ -46,15 +35,14 @@ const DeckCard = () => {
 				: { gap: "0.5rem", height: "100%" };
 		}
 	};
-
 	return (
 		<div className={dealType} style={tiradaClass(fullCardViewActive)}>
-			<div className="title">{title}</div>
-			<div className="subTitle">{subTitle}</div>
+			<div className="title">{title === "" ? null : title}</div>
+			<div className="subTitle">{subTitle === "" ? null : subTitle}</div>
 			{deck.map((c) => (
 				<FlipabbeCard key={c.id} deck={c} />
 			))}
-			<div className="footer">{footer}</div>
+			<div className="footer">{footer[0] === undefined ? null : footer}</div>
 		</div>
 	);
 };

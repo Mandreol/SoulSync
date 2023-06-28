@@ -6,13 +6,18 @@
 	perspective: 1000px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	border: solid 2px black;
 	border-radius: 15px;
 }
 
 .cardTitle {
+	display: flex;
+	justify-content: center;
+	align-items: start;
 	width: 100%;
-	height: 50px;
+}
+.cardTitle div {
+	font-size: 1.5rem;
 }

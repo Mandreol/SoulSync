@@ -38,6 +38,7 @@ const SelectDeal = () => {
 	const selectedDealStatus = useSelector((state) => state.selectedDealStatus);
 	const dispatch = useDispatch();
 	const [selectedItem, setSelectedItem] = useState(null);
+	const menuStatus = useSelector((state) => state.menuStatus);
 
 	const selectDeal = () => {
 		dispatch(setSelectedDealStatus(2));
@@ -56,11 +57,15 @@ const SelectDeal = () => {
 	};
 
 	useEffect(() => {
-		setSelectedClass(selectedDealStatus === 2 ? "selected-1" : "");
+		setSelectedClass(
+			selectedDealStatus === 2 && menuStatus === 1 ? "selected-1" : ""
+		);
 	}, [selectedDealStatus]);
 
 	useEffect(() => {
-		setListClass(selectedDealStatus === 2 ? "visible" : "hidden");
+		setListClass(
+			selectedDealStatus === 2 && menuStatus === 1 ? "visible" : "hidden"
+		);
 	}, [selectedDealStatus]);
 
 	return (

@@ -25,7 +25,8 @@ const DeckSelector = () => {
 	const handleSubmit = () => {
 		dispatch(setMenuStatus(1));
 	};
-	const selected = (option) => (isSelected === option ? "selected" : "");
+	const selected = (option) =>
+		isSelected === option && menuStatus === 0 ? "selected" : "";
 
 	return (
 		<div className="DeckSelector-container">

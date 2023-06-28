@@ -2,11 +2,14 @@ import React, { useState } from "react";
 import "../../styles/dashboard/card.css";
 import "../../styles/cardTransitionGroup.css";
 import FullCardViewButton from "./FullCardViewButton";
+import { useSelector } from "react-redux";
 
 function Card({ deck, onDoubleClick }) {
 	const [isHover, setIsHover] = useState(true);
 	const [isCover, setIsCover] = useState(true);
 	const [showButton, setShowButton] = useState(true);
+	const deckType = useSelector((state) => state.dealData.deckType);
+	const backText = useSelector((state) => state.dealData.backText);
 
 	const handleOnMouseEnterBack = () => {
 		setIsHover(false);
@@ -47,7 +50,7 @@ function Card({ deck, onDoubleClick }) {
 	}
 
 	return (
-		<div className="card" onDoubleClick={onDoubleClick}>
+		<div className={`deck deck_${deckType}`} onDoubleClick={onDoubleClick}>
 			<div
 				className={hoverClass}
 				onMouseEnter={handleOnMouseEnterBack}

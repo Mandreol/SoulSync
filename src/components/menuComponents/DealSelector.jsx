@@ -11,9 +11,9 @@ const DealSelector = () => {
 	const [buttonClassLeft, setButtonClassLeft] = useState("none");
 	const [buttonClassRigth, setButtonClassRigth] = useState("none");
 	const selectedDealStatus = useSelector((state) => state.selectedDealStatus);
+	const dealType = useSelector((state) => state.dealData.dealType);
 
 	const navigate = useNavigate();
-
 	const dispatch = useDispatch();
 
 	const menuStatus = useSelector((state) => state.menuStatus);
@@ -33,10 +33,13 @@ const DealSelector = () => {
 	}, [menuStatus]);
 
 	useEffect(() => {
-		selectedDealStatus !== 0 && menuStatus === 1
+		((selectedDealStatus === 2 && dealType !== ".") ||
+			selectedDealStatus === 1 ||
+			selectedDealStatus === 3) &&
+		menuStatus === 1
 			? setButtonClassRigth("flex")
 			: setButtonClassRigth("none");
-	}, [selectedDealStatus, menuStatus]);
+	}, [selectedDealStatus, menuStatus, dealType]);
 
 	return (
 		<div className="dealSelector">

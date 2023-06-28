@@ -6,7 +6,7 @@ export const dealDataSlice = createSlice({
 		deckType: "", // Tipo de baraja
 		deckSize: 0, // Tamaño de la baraja
 		cardsToDeal: 0, // Número de cartas a repartir
-		dealType: "", // Nombre de la tirada
+		dealType: ".", // Nombre de la tirada
 		title: "", // Título
 		subTitle: "", // Subtítulo
 		texts: [], // area de texto
@@ -45,6 +45,26 @@ export const dealDataSlice = createSlice({
 		setFooter: (state, action) => {
 			state.footer = action.payload; // Establece el pie de página
 		},
+		resetData: (state, action) => {
+			state.deckType = "";
+			state.deckSize = 0;
+			state.cardsToDeal = 0;
+			state.dealType = "";
+			state.title = "";
+			state.subTitle = "";
+			state.texts = [];
+			state.cardTexts = [];
+			state.backTexts = [];
+			state.footer = "";
+		},
+		resetMetaData: (state, action) => {
+			state.title = "";
+			state.subTitle = "";
+			state.texts = [];
+			state.cardTexts = [];
+			state.backTexts = [];
+			state.footer = "";
+		},
 	},
 });
 
@@ -59,6 +79,8 @@ export const {
 	setCardTexts,
 	setBackTexts,
 	setFooter,
+	resetData,
+	resetMetaData,
 } = dealDataSlice.actions;
 
 export default dealDataSlice.reducer;

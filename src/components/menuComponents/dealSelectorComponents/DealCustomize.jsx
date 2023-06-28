@@ -7,13 +7,14 @@ const DealCustomize = () => {
 	const dispatch = useDispatch();
 	const selectedDealStatus = useSelector((state) => state.selectedDealStatus);
 	const [selectedClass, setSelectedClass] = useState("");
+	const menuStatus = useSelector((state) => state.menuStatus);
 
 	const customDeal = () => {
 		dispatch(setSelectedDealStatus(3));
 	};
 
 	useEffect(() => {
-		setSelectedClass(selectedDealStatus === 3 ? "selected-1" : "");
+		setSelectedClass(selectedDealStatus === 3 && menuStatus ? "selected-1" : "");
 	}, [selectedDealStatus]);
 	return (
 		<div className={`dealCustomize-element-container `}>
