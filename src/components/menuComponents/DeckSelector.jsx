@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { setDeckType, setDeckSize } from "../../store/slices/deckType.slice";
+import { setDeckType, setDeckSize } from "../../store/slices/dealData.slice";
 import "../../styles/menu/deckSelector/deckSelector.css";
 import { setMenuStatus } from "../../store/slices/menuStatus.slice";
 

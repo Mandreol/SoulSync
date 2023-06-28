@@ -1,28 +1,15 @@
-.flipabble-card-container-maso_1 {
+.flipabble-card-container {
 	position: relative;
 	z-index: 1;
-	height: 210px;
+	height: 120%;
+	width: 27vw;
 	perspective: 1000px;
-	max-width: 280px;
-	flex: 1 1 250px;
-}
-.flipabble-card-container-maso_2 {
-	position: relative;
-	z-index: 1;
-	height: 320px;
-	perspective: 1000px;
-	max-width: 170px;
-	flex: 1 1 170px;
 	display: flex;
 	flex-direction: column;
-}
-.flipabble-card-container-maso_3 {
-	position: relative;
-	z-index: 1;
-	height: 240px;
-	perspective: 1000px;
-	max-width: 240px;
-	flex: 1 1 240px;
+	justify-content: center;
+	align-items: center;
+	border: solid 2px black;
+	border-radius: 15px;
 }
 
 .cardTitle {

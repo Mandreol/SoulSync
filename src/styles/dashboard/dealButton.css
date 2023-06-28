@@ -1,0 +1,16 @@
+.dealButton {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+	width: 70px;
+	height: 61px;
+	background-image: url("./img/assets/boton-de-play.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	transition: all 0.5s;
+	cursor: pointer;
+}
+.dealButton:hover {
+	filter: brightness(150%);
+	transition: all 0.5s;
+}

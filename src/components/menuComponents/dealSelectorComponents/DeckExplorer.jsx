@@ -1,19 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import "../../../styles/menu/dealSelector/deckExplorer.css";
-import { setCardsToDealCount } from "../../../store/slices/cardsToDealCount.slice";
+import {
+	setCardsToDeal,
+	setDealType,
+} from "../../../store/slices/dealData.slice";
 import { setSelectedDealStatus } from "../../../store/slices/selectedDealStatus.slice";
 
 const DeckExplorer = () => {
 	const dispatch = useDispatch();
-	const deckSize = useSelector((state) => state.deckType.deckSize);
+	const deckSize = useSelector((state) => state.dealData.deckSize);
 	const selectedDealStatus = useSelector((state) => state.selectedDealStatus);
 
 	const [selectedClass, setSelectedClass] = useState("");
-
 	const explore = () => {
-		dispatch(setCardsToDealCount(deckSize));
+		dispatch(setCardsToDeal(deckSize));
 		dispatch(setSelectedDealStatus(1));
+		dispatch(setDealType("fullDeck"));
 	};
 
 	useEffect(() => {

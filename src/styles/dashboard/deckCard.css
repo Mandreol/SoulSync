@@ -1,4 +1,4 @@
-.deckCard {
+.fullDeck {
 	width: 95%;
 	margin-top: 25px;
 	background-color: rgba(36, 65, 20, 0.582);
@@ -6,4 +6,91 @@
 	justify-content: center;
 	align-content: space-around;
 	flex-wrap: wrap;
+}
+
+.pointOfView_1 {
+	display: grid;
+	grid-auto-flow: row dense;
+	grid-auto-columns: 1fr;
+	grid-auto-rows: 1fr;
+	grid-template-columns: 0.5fr repeat(12, 1fr) 0.5fr;
+	grid-template-rows: 0.5fr 0.4fr 0.3fr 0.9fr 1.9fr repeat(2, 1fr) 0.5fr;
+	gap: 0px 0px;
+	grid-template-areas:
+		". . . . . . . . . . . . . ."
+		". . title title title title title title title title title title . ."
+		". . subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle subtitle . ."
+		". text_1 text_1 text_1 text_1 text_2 text_2 text_2 text_2 text_3 text_3 text_3 text_3 ."
+		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
+		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
+		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
+		". . footer footer footer footer footer footer footer footer footer footer footer .";
+	justify-content: center;
+	align-content: center;
+	justify-items: stretch;
+	align-items: stretch;
+	width: 100%;
+	height: 90%;
+}
+.title {
+	grid-area: title;
+}
+.subtitle {
+	grid-area: subtitle;
+}
+.text_1 {
+	grid-area: text_1;
+}
+.text_2 {
+	grid-area: text_2;
+}
+.text_3 {
+	grid-area: text_3;
+}
+.card_1 {
+	grid-area: card_1;
+}
+.card_2 {
+	grid-area: card_2;
+}
+.card_3 {
+	grid-area: card_3;
+}
+.footer {
+	justify-self: center;
+	align-self: center;
+	grid-area: footer;
+}
+
+.card_1 {
+	grid-area: card_1;
+}
+.card_2 {
+	grid-area: card_2;
+}
+.card_3 {
+	grid-area: card_3;
+}
+.subTitle {
+	font-size: 1.5rem;
+	grid-area: subtitle;
+}
+.text_1 {
+	grid-area: text_1;
+}
+.text_2 {
+	grid-area: text_2;
+}
+.text_3 {
+	grid-area: text_3;
+}
+.footer {
+	grid-area: footer;
+	padding-bottom: 7vh;
+	font-size: 1.5rem;
+}
+.title {
+	font-size: 3rem;
+	grid-area: title;
+	margin-top: -2%;
 }

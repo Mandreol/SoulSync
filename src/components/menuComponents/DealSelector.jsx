@@ -23,8 +23,7 @@ const DealSelector = () => {
 	};
 
 	const continueButton = () => {
-		selectedDealStatus === 1 ||
-		(selectedDealStatus === 2 && dealType !== undefined)
+		selectedDealStatus === 1 || selectedDealStatus === 2
 			? navigate("/dashboard")
 			: dispatch(setMenuStatus(2));
 	};

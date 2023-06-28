@@ -34,7 +34,6 @@
 	top: 110%;
 	width: 100%;
 	height: 0%;
-	background-color: aliceblue;
 	transition: all 0.5s;
 	overflow: hidden;
 }
@@ -42,30 +41,34 @@
 	position: absolute;
 	top: 110%;
 	width: 100%;
-	height: 110%;
-	background-color: aliceblue;
 	transition: all 0.5s;
+	background-color: rgba(255, 255, 255, 0.1);
 }
 
 .selectDeal-element-list-inner {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	gap: 0.5rem;
 }
 
 .selectDeal-element-item {
-	background-color: black;
-	text-align: center;
 	transition: all 0.3s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 30px;
+	cursor: pointer;
 }
 
 .selectDeal-element-item:hover {
-	background-color: rgba(0, 0, 0, 0.63);
+	background-color: rgba(0, 0, 0, 0.2);
 	transition: all 0.3s;
 }
 
 .selected-1 {
 	box-shadow: 0px 0px 20px 10px rgba(247, 247, 247, 0.9);
 	border-radius: 50%;
+}
+.selected-2 {
+	background-color: rgba(0, 0, 0, 0.2);
 }

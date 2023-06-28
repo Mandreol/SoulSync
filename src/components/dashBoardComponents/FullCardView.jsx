@@ -5,7 +5,7 @@ import FullCardViewButton from "./FullCardViewButton";
 
 const FullCardView = () => {
 	const [isCover, setIsCover] = useState(true);
-	const deckType = useSelector((state) => state.deckType.deckType);
+	const deckType = useSelector((state) => state.dealData.deckType);
 	const fullCardViewActive = useSelector((state) => state.fullCardViewActive);
 	const selectedFullViewCard = useSelector(
 		(state) => state.selectedFullViewCard

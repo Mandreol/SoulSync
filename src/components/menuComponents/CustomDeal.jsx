@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../../styles/menu/customDeal/customDeal.css";
 import { useDispatch } from "react-redux";
 import { setMenuStatus } from "../../store/slices/menuStatus.slice";
-import { setCardsToDealCount } from "../../store/slices/cardsToDealCount.slice";
+import { setCardsToDeal } from "../../store/slices/dealData.slice";
 import { useNavigate } from "react-router-dom";
 
 const CustomCardDeal = () => {
