@@ -3,18 +3,23 @@ import { createSlice } from "@reduxjs/toolkit";
 export const dealDataSlice = createSlice({
 	name: "dealData",
 	initialState: {
+		id: "1",
 		deckType: "", // Tipo de baraja
 		deckSize: 0, // Tamaño de la baraja
 		cardsToDeal: 0, // Número de cartas a repartir
 		dealType: ".", // Nombre de la tirada
 		title: "", // Título
 		subTitle: "", // Subtítulo
+		focusNote: "", //nota de foco de la actividad
 		texts: [], // area de texto
 		cardTexts: [], // Texto superior de las cartas
 		backTexts: [], // texto de las cartas en reverso
 		footer: "", // Pie de página
 	},
 	reducers: {
+		setId: (state, action) => {
+			state.id = action.payload; // establece el id de la tirada
+		},
 		setDeckType: (state, action) => {
 			state.deckType = action.payload; // Establece el tipo de baraja
 		},
@@ -29,6 +34,9 @@ export const dealDataSlice = createSlice({
 		},
 		setTitle: (state, action) => {
 			state.title = action.payload; // Establece el título de la tirada
+		},
+		setFocusNote: (state, action) => {
+			state.focusNote = action.payload; // nota de foco de la actividad
 		},
 		setSubTitle: (state, action) => {
 			state.subTitle = action.payload; // Establece el subtítulo de la tirada
@@ -49,7 +57,7 @@ export const dealDataSlice = createSlice({
 			state.deckType = "";
 			state.deckSize = 0;
 			state.cardsToDeal = 0;
-			state.dealType = "";
+			state.dealType = ".";
 			state.title = "";
 			state.subTitle = "";
 			state.texts = [];
@@ -69,12 +77,14 @@ export const dealDataSlice = createSlice({
 });
 
 export const {
+	setId,
 	setDeckType,
 	setDeckSize,
 	setCardsToDeal,
 	setDealType,
 	setTitle,
 	setSubTitle,
+	setFocusNote,
 	setTexts,
 	setCardTexts,
 	setBackTexts,

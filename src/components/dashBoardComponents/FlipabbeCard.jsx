@@ -9,6 +9,7 @@ const FlipabbleCard = (deck) => {
 	const [showFront, setShowFront] = useState(true);
 	const cardsTexts = useSelector((state) => state.dealData.cardTexts);
 	const cardId = `card_${deck.deck.id}`;
+	const dealType = useSelector((state) => state.dealData.dealType);
 	const cardTitle = cardsTexts[deck.deck.id - 1];
 
 	const handleOnClick = () => {
@@ -16,10 +17,9 @@ const FlipabbleCard = (deck) => {
 	};
 
 	return (
-		<div className={`flipabble-card-container ${cardId}`}>
-			<div className="cardTitle">
-				<div>{cardsTexts[0] ? cardTitle : null}</div>
-			</div>
+		<div className={`flipabble-card-container-${dealType} ${cardId}`}>
+			{cardsTexts[0] ? <div className="cardTitle"> {cardTitle} </div> : null}
+
 			<CSSTransition in={showFront} timeout={300} classNames="flip">
 				<Card key={deck.deck.id} onDoubleClick={handleOnClick} deck={deck} />
 			</CSSTransition>

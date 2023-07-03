@@ -7,17 +7,29 @@
 	cursor: pointer;
 	z-index: 1;
 }
-.deck_1 {
-	width: 23vw;
-	height: 60%;
+.deck_1_pointOfView {
+	width: 20vw;
+	height: 24vh;
 }
-.deck_2 {
-	width: 16vw;
-	height: 80%;
+.deck_2_pointOfView {
+	width: 13vw;
+	height: 32vh;
 }
-.deck_3 {
-	width: 21vw;
-	height: 70%;
+.deck_3_pointOfView {
+	width: 240px;
+	height: 240px;
+}
+.deck_1_fullDeck {
+	width: 250px;
+	height: 200px;
+}
+.deck_2_fullDeck {
+	width: 180px;
+	height: 270px;
+}
+.deck_3_fullDeck {
+	width: 280px;
+	height: 280px;
 }
 .card-hover {
 	box-shadow: 0px 0px 10px 4px white;
@@ -64,21 +76,4 @@
 	position: absolute;
 	top: 5px;
 	left: 5px;
-}
-.cover {
-	position: relative;
-	width: 100%;
-	height: 10%;
-	background-color: black;
-	z-index: 200;
-	opacity: 1;
-	transition: all 1s;
-}
-.noCover {
-	position: relative;
-	z-index: 200;
-	width: 100%;
-	height: 15%;
-	opacity: 0;
-	transition: all 1s;
 }

@@ -7,6 +7,7 @@ const DeckCard = () => {
 	const fullCardViewActive = useSelector((state) => state.fullCardViewActive);
 	const deckType = useSelector((state) => state.dealData.deckType);
 	const deckSize = useSelector((state) => state.dealData.deckSize);
+	const id = useSelector((state) => state.dealData.id);
 	const dealType = useSelector((state) => state.dealData.dealType);
 	const cardsToDeal = useSelector((state) => state.dealData.cardsToDeal);
 	const title = useSelector((state) => state.dealData.title);
@@ -30,15 +31,16 @@ const DeckCard = () => {
 		if (fullCardViewActive) {
 			return { display: "none" };
 		} else {
-			return cardsToDeal <= 8
-				? { gap: "5rem", height: "100vh" }
-				: { gap: "0.5rem", height: "100%" };
+			return cardsToDeal <= 12 ? { height: "100vh" } : { height: "100%" };
 		}
 	};
 	return (
-		<div className={dealType} style={tiradaClass(fullCardViewActive)}>
-			<div className="title">{title === "" ? null : title}</div>
-			<div className="subTitle">{subTitle === "" ? null : subTitle}</div>
+		<div className={`${dealType}_${id}`} style={tiradaClass(fullCardViewActive)}>
+			{title === "" ? null : <div className="title">{title}</div>}
+			{subTitle === "" ? null : <div className="subTitle"> {subTitle}</div>}
+			{dealType === "pointOfView" ? (
+				<textarea className="focusNote" name="focusNote"></textarea>
+			) : null}
 			{deck.map((c) => (
 				<FlipabbeCard key={c.id} deck={c} />
 			))}

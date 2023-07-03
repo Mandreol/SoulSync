@@ -7,6 +7,7 @@ import {
 } from "../../../store/slices/dealData.slice";
 import { setSelectedDealStatus } from "../../../store/slices/selectedDealStatus.slice";
 import { resetMetaData } from "../../../store/slices/dealData.slice";
+import { setId } from "../../../store/slices/dealData.slice";
 
 const DeckExplorer = () => {
 	const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const DeckExplorer = () => {
 		dispatch(setCardsToDeal(deckSize));
 		dispatch(setSelectedDealStatus(1));
 		dispatch(setDealType("fullDeck"));
+		dispatch(setId("1"));
 		dispatch(resetMetaData());
 	};
 

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../styles/dashboard/card.css";
 import "../../styles/cardTransitionGroup.css";
 import FullCardViewButton from "./FullCardViewButton";
@@ -10,6 +10,7 @@ function Card({ deck, onDoubleClick }) {
 	const [showButton, setShowButton] = useState(true);
 	const deckType = useSelector((state) => state.dealData.deckType);
 	const backText = useSelector((state) => state.dealData.backText);
+	let dealType = useSelector((state) => state.dealData.dealType);
 
 	const handleOnMouseEnterBack = () => {
 		setIsHover(false);
@@ -50,7 +51,9 @@ function Card({ deck, onDoubleClick }) {
 	}
 
 	return (
-		<div className={`deck deck_${deckType}`} onDoubleClick={onDoubleClick}>
+		<div
+			className={`deck deck_${deckType}_${dealType}`}
+			onDoubleClick={onDoubleClick}>
 			<div
 				className={hoverClass}
 				onMouseEnter={handleOnMouseEnterBack}

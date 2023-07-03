@@ -45,7 +45,7 @@ const DeckSelector = () => {
 						className={`DeckSelector-element ${selected(2)}`}
 						onClick={() => handleClick(2, 80)}
 						style={{ backgroundImage: "url('./img/maso_2/icon_deck_2.png')" }}></div>
-					<h1>Fatasy Cards</h1>
+					<h1>Fantasy Cards</h1>
 				</div>
 				<div className="DeckSelector-element-container">
 					<div

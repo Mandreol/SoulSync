@@ -3,6 +3,7 @@ import "../../../styles/menu/dealSelector/selectDeal.css";
 import { setSelectedDealStatus } from "../../../store/slices/selectedDealStatus.slice";
 import { useDispatch, useSelector } from "react-redux";
 import {
+	setId,
 	setCardsToDeal,
 	setDealType,
 	setTitle,
@@ -12,28 +13,10 @@ import {
 	setBackTexts,
 	setFooter,
 } from "../../../store/slices/dealData.slice";
+import { dealsList } from "../../../dealData/dealDatas.js";
 
 const SelectDeal = () => {
-	const dealsList = [
-		{
-			dealType: "pointOfView_1",
-			cardsToDeal: 3,
-			title: "Ganancia y pérdida",
-			subTitle:
-				"Gane claridad con respecto a las decisiones que debe tomar en la vida. Analice los pro los contas desde una perespectiva diferente",
-			cardTexts: [
-				"¿Qué gano?",
-				"¿Que precio estoy pagando?",
-				"¿Qué he aprendido?",
-			],
-
-			backTexts: ["pasado", "presente", "futuro"],
-			footer:
-				"Se le invita a tomar nota de cada reflexión y tomar nota en cada caso",
-		},
-	];
 	const [selectedClass, setSelectedClass] = useState("");
-
 	const [listClass, setListClass] = useState("hidden");
 	const selectedDealStatus = useSelector((state) => state.selectedDealStatus);
 	const dispatch = useDispatch();
@@ -46,6 +29,7 @@ const SelectDeal = () => {
 
 	const selectedDeal = (deal) => {
 		setSelectedItem(deal.dealType);
+		dispatch(setId(deal.id));
 		dispatch(setDealType(deal.dealType));
 		dispatch(setCardsToDeal(deal.cardsToDeal));
 		dispatch(setTitle(deal.title));
@@ -83,7 +67,7 @@ const SelectDeal = () => {
 							}`}
 							key={dealsList[i]}
 							onClick={() => selectedDeal(e)}>
-							{e.dealType}
+							{e.title}
 						</div>
 					))}
 				</div>

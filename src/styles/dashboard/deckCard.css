@@ -1,35 +1,65 @@
-.fullDeck {
+.fullDeck_1 {
 	width: 95%;
 	margin-top: 25px;
 	background-color: rgba(36, 65, 20, 0.582);
 	display: flex;
 	justify-content: center;
-	align-content: space-around;
+	align-content: center;
 	flex-wrap: wrap;
 }
 
 .pointOfView_1 {
 	display: grid;
-	grid-template-columns: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.2fr;
-	grid-template-rows: 0.5fr 0.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: repeat(7, 1fr) repeat(2, 0.5fr);
 	gap: 0px 0px;
 	grid-template-areas:
-		". title title title title title title title title title title title title ."
-		". subTitle subTitle subTitle subTitle subTitle subTitle subTitle subTitle subTitle subTitle subTitle subTitle ."
-		". text_1 text_1 text_1 text_1 text_2 text_2 text_2 text_2 text_3 text_3 text_3 text_3 ."
-		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
-		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
-		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
-		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
-		". card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3 ."
-		". footer footer footer footer footer footer footer footer footer footer footer footer .";
+		". . . . . . . . . . . ."
+		"title title title title focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote"
+		"subTitle subTitle subTitle subTitle focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote"
+		"card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3"
+		"card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3"
+		"card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3"
+		"card_1 card_1 card_1 card_1 card_2 card_2 card_2 card_2 card_3 card_3 card_3 card_3"
+		". . footer footer footer footer footer footer footer footer . ."
+		". . . . . . . . . . . .";
 
 	justify-content: center;
 	align-content: center;
 	justify-items: center;
 	align-items: center;
-	width: 100%;
-	height: 100%;
+	overflow: hidden;
+}
+.pointOfView_2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(19, 1fr);
+	gap: 0px 0px;
+	grid-template-areas:
+		". . . . . . . . . . . . . . . . . . . . . . . ."
+		". title title title title . . focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote . . . . ."
+		". subTitle subTitle subTitle subTitle . . focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote . . . . ."
+		". subTitle subTitle subTitle subTitle . . focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote focusNote . . . . ."
+		". . . . . . . . . . . . . . . . . . . . . . . ."
+		". . . card_1 card_1 card_1 card_1 card_1 card_1 . card_2 card_2 card_2 card_2 card_2 card_2 . card_3 card_3 card_3 card_3 card_3 card_3 ."
+		". . . card_1 card_1 card_1 card_1 card_1 card_1 . card_2 card_2 card_2 card_2 card_2 card_2 . card_3 card_3 card_3 card_3 card_3 card_3 ."
+		". . . card_1 card_1 card_1 card_1 card_1 card_1 . card_2 card_2 card_2 card_2 card_2 card_2 . card_3 card_3 card_3 card_3 card_3 card_3 ."
+		". . . card_1 card_1 card_1 card_1 card_1 card_1 . card_2 card_2 card_2 card_2 card_2 card_2 . card_3 card_3 card_3 card_3 card_3 card_3 ."
+		". . . card_1 card_1 card_1 card_1 card_1 card_1 . card_2 card_2 card_2 card_2 card_2 card_2 . card_3 card_3 card_3 card_3 card_3 card_3 ."
+		". . . card_1 card_1 card_1 card_1 card_1 card_1 . card_2 card_2 card_2 card_2 card_2 card_2 . card_3 card_3 card_3 card_3 card_3 card_3 ."
+		". . . . . . . . . . . . . . . . . . . . . . . ."
+		". . . . . . card_4 card_4 card_4 card_4 card_4 card_4 . . card_5 card_5 card_5 card_5 card_5 card_5 . . . ."
+		". footer footer footer footer . card_4 card_4 card_4 card_4 card_4 card_4 . . card_5 card_5 card_5 card_5 card_5 card_5 . . . ."
+		". footer footer footer footer . card_4 card_4 card_4 card_4 card_4 card_4 . . card_5 card_5 card_5 card_5 card_5 card_5 . . . ."
+		". footer footer footer footer . card_4 card_4 card_4 card_4 card_4 card_4 . . card_5 card_5 card_5 card_5 card_5 card_5 . . . ."
+		". footer footer footer footer . card_4 card_4 card_4 card_4 card_4 card_4 . . card_5 card_5 card_5 card_5 card_5 card_5 . . . ."
+		". footer footer footer footer . card_4 card_4 card_4 card_4 card_4 card_4 . . card_5 card_5 card_5 card_5 card_5 card_5 . . . ."
+		". . . . . . . . . . . . . . . . . . . . . . . .";
+
+	justify-content: center;
+	align-content: center;
+	justify-items: center;
+	align-items: center;
 	overflow: hidden;
 }
 
@@ -42,26 +72,36 @@
 .card_3 {
 	grid-area: card_3;
 }
+.card_4 {
+	grid-area: card_4;
+}
+.card_5 {
+	grid-area: card_5;
+}
 .subTitle {
-	font-size: 1.5rem;
+	font-size: 1rem;
+	padding-left: 30px;
 	grid-area: subTitle;
 }
-.text_1 {
-	grid-area: text_1;
+.focusNote {
+	width: 100%;
+	height: 100%;
+	background: none;
+	padding: 0.5rem;
+	grid-area: focusNote;
+	border: 2px dashed black;
+	border-radius: 15px;
+	overflow-y: auto;
+	resize: none;
+	white-space: pre-wrap;
+	word-wrap: break-word;
 }
-.text_2 {
-	grid-area: text_2;
-}
-.text_3 {
-	grid-area: text_3;
-}
+
 .footer {
 	grid-area: footer;
-	padding-bottom: 7vh;
 	font-size: 1.5rem;
 }
 .title {
-	font-size: 3rem;
+	font-size: 2rem;
 	grid-area: title;
-	padding-top: 5%;
 }
