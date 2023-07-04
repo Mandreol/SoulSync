@@ -1,6 +1,7 @@
 .flipabble-card-container-pointOfView {
 	position: relative;
 	z-index: 1;
+	width: 25vw;
 	perspective: 1000px;
 	display: flex;
 	flex-direction: column;
@@ -19,9 +20,28 @@
 	justify-content: center;
 	align-items: center;
 }
+.flipabble-card-container-dofa {
+	position: relative;
+	z-index: 1;
+	perspective: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.flipabble-card-container-dos-opciones {
+	position: relative;
+	z-index: 1;
+	perspective: 1000px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
 
 .cardTitle {
 	display: flex;
 	justify-content: center;
 	width: 100%;
+	margin-bottom: 10px;
 }

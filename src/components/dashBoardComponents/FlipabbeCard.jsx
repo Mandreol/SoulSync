@@ -18,7 +18,9 @@ const FlipabbleCard = (deck) => {
 
 	return (
 		<div className={`flipabble-card-container-${dealType} ${cardId}`}>
-			{cardsTexts[0] ? <div className="cardTitle"> {cardTitle} </div> : null}
+			{cardsTexts.some((elemento) => elemento !== "") ? (
+				<div className="cardTitle"> {cardTitle} </div>
+			) : null}
 
 			<CSSTransition in={showFront} timeout={300} classNames="flip">
 				<Card key={deck.deck.id} onDoubleClick={handleOnClick} deck={deck} />
